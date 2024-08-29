@@ -25,8 +25,14 @@ namespace negocio
 
         public void setearConsulta(string consulta)
         {
-            comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = consulta;
+            comando.CommandType = System.Data.CommandType.Text;// pone el commandType en commandText
+            comando.CommandText = consulta;// setea consulta
+        }
+
+        public void setearProcedimiento (string sp)
+        {
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.CommandText = sp;
         }
 
         public void ejecutarLectura()
